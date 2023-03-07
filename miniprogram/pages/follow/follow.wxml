@@ -1,0 +1,11 @@
+<!--pages/follow/follow.wxml-->
+<view class="follow_content">
+  <block wx:for="{{flolist}}" wx:key="*this">
+    <view bindtap="toUserDetail" data-id="{{item.uid}}" class="user_item">
+      <!--左侧图片容器-->
+      <image src="{{item.img}}" class="user_img"></image>
+      <!--右侧用户容器-->
+      <view class="user_name">{{item.name}}</view> 
+    </view>
+</block>
+</view>

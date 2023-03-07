@@ -1,0 +1,15 @@
+<!--pages/edit/edit.wxml-->
+<!--输入区域-->
+<view class="item">
+  <view>校区：</view>
+  <input value="{{school}}" bindinput="getSchool" />
+</view>
+<view class="item">
+  <view>昵称：</view>
+  <input value="{{name}}" bindinput="getName" />
+</view>
+<!--按钮区域-->
+<view class="btn_row">
+  <!-- <button class="btn">取消</button> -->
+  <button class="btn" bindtap="submit">确认</button>
+</view>

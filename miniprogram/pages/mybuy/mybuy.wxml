@@ -1,0 +1,38 @@
+<!--pages/mybuy/mybuy.wxml-->
+<view class="order_main">
+  <block wx:for="{{goodlist}}" wx:key="*this">
+    <view class="order_item">
+    <view bindtap="toGoodDetail" data-id="{{item._id}}" class="goods">
+      <image mode="aspectFit" src="{{item.cover}}"></image>
+    </view>
+      <view class="order_info">
+        <view class="order_row">
+          <text class="order_text">订单编号:</text>
+          <view class="order_no_value">{{item._id}}</view>
+        </view>
+        <view class="order_row">
+          <view class="order_text">商品名称:</view>
+          <view class="order_name_value">{{item.title}}</view>
+        </view>
+        <view class="order_row">
+          <view class="order_text">订单价格:</view>
+          <view class="order_price_value">¥{{item.price}}</view>
+        </view> 
+        <view class="order_row">
+          <view class="order_text">订单日期:</view>
+          <view class="order_time_value">{{item.buytime}}</view>
+        </view>
+        <view class="order_row" wx:if="{{item.sellerconfir}}">
+          <view class="order_text">订单状态:</view>
+          <view class="order_time_value">完成订单</view>
+          <!-- <view bindtap="delete"class="receive" data-id="{{item._id}}">取消订单</view> -->
+        </view>
+        <view class="order_row" wx:else="">
+          <view class="order_text">订单状态:</view>
+          <view class="order_time_value">待收货</view>
+          <view bindtap="deletebuy"class="receive" data-id="{{item._id}}">取消订单</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

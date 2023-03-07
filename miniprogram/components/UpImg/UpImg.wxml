@@ -1,0 +1,5 @@
+<!--components/UpImg/UpImg.wxml-->
+<view class="up_img_wrap">
+  <image src="../../imgs/SCU_JA.jpg"></image>
+  <icon type="clear" size="23" color="grey"></icon>
+</view>

@@ -1,0 +1,24 @@
+/* pages/edit/edit.wxss */
+page{
+  background-color: #f3f3f3;
+}
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+    margin-top: 180rpx;
+}
+.item{
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding: 13px;
+    margin-top: 100rpx;  
+}
+.btn_row{
+    display: flex;
+    margin-top: 80rpx;
+}
+.btn{
+    background: #009589;
+    color: #fff;
+}

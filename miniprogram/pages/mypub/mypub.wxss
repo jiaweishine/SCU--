@@ -1,0 +1,109 @@
+/* pages/mypub/mypub.wxss */
+.order_item{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.order_item image{
+  border-radius: 25rpx;
+  height: 200rpx;
+  width: 250rpx;
+  justify-content: center;
+  align-items: center;
+}
+.order_info{
+  color: #666;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+}
+.order_row{
+  display: flex;
+  padding: 5rpx 0;
+}
+.order_text{
+  margin-right: 15rpx;
+}
+.order_name_value{
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.order_price_value{
+  color: #009589;
+  font-size: 32rpx;
+}
+.edit{
+  color: red;
+  margin-left: 350rpx;
+}
+.delete{
+  color: red;
+  margin-left: 350rpx;
+}
+/* from user */
+/* pages/user/user.wxss */
+/* 头像、昵称、关注 */
+.user_info_wrap{
+  height: 38vh;
+  overflow: hidden;
+  background-color: #009589;
+}
+.user_wrap{
+  position: relative;
+}
+.user_bg{
+  height: 40vh;
+  width: 100%;
+  /* 高斯模糊 */
+  filter: blur(10rpx);
+}
+.user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_name{
+  color: #fff;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.user_follow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.follow_icon{
+  width:50rpx;
+  height:50rpx;
+}
+/* 已发布商品 */
+.goods-box{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.goods {
+  background: #fff;
+}
+.goods-img{
+  width: 345rpx;
+  height: 400rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+.goods_title {
+  font-size: 38rpx;
+}
+.goods_price {
+  color: red;
+}

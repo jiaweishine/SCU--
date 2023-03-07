@@ -1,0 +1,57 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/message/messgae",
+        "pages/pub/pub",
+        "pages/mine/mine",
+        "pages/goodDetail/goodDetail",
+        "pages/mypub/mypub",
+        "pages/collect/collect",
+        "pages/mysell/mysell",
+        "pages/mybuy/mybuy",
+        "pages/follow/follow",
+        "pages/user/user",
+        "pages/no_log/no_log", 
+        "pages/goodList/goodList",
+        "pages/Search/Search",
+        "pages/history/history",
+        "pages/edit/edit",
+        "pages/messagelist/messagelist",
+        "pages/confirm/confirm",
+        "pages/modify/modify"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#009589",
+        "navigationBarTitleText": "SCU_二手交易平台",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/imgs/home0.png",
+        "selectedIconPath": "/imgs/home1.png"
+      },
+      {
+        "pagePath": "pages/messagelist/messagelist",
+        "text": "消息",
+        "iconPath": "/imgs/msg0.png",
+        "selectedIconPath": "/imgs/msg1.png"
+      },
+      {
+        "pagePath": "pages/pub/pub",
+        "text": "发布闲置",
+        "iconPath": "/imgs/pub0.png",
+        "selectedIconPath": "/imgs/pub1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/imgs/me0.png",
+        "selectedIconPath": "/imgs/me1.png"
+      }]
+    }
+}

@@ -1,0 +1,29 @@
+<!--pages/mypub/mypub.wxml-->
+<view class="goods-box">
+  <block wx:for="{{goodlist}}" wx:key="*this">
+      <view class="order_main">
+        <view class="order_item">
+          <view bindtap="toGoodDetail" data-id="{{item._id}}">
+          <image mode="aspectFit" src="{{item.cover}}"></image>
+          </view>
+          <view class="order_info">
+    
+            <view class="order_row">
+              <view class="order_text">商品名称:</view>
+              <view class="order_name_value">{{item.title}}</view>
+            </view>
+            <view class="order_row">
+              <view class="order_text">商品价格:</view>
+              <view class="order_price_value">{{item.price}}</view>
+            </view> 
+            <view class="order_row">
+              <view class="order_text">发布日期:</view>
+              <view class="order_time_value">{{item._createTime}}</view>
+            </view> 
+            <view bindtap="toEdit" data-id="{{item._id}}"class="edit" >修改</view>
+            <view bindtap="Delete" data-id="{{item._id}}"class="delete" >删除</view>
+          </view>
+        </view>
+      </view>
+  </block>
+</view>

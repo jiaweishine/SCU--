@@ -1,0 +1,45 @@
+/* pages/Search/Search.wxss */
+/* 商品 */
+.goods_item{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.goods_img_wrap{
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  width: 350rpx;
+}
+.goods_img_wrap image{
+  margin-left: 30rpx;
+  margin-bottom: 25rpx;
+  margin-top: 25rpx;
+  border-radius: 25rpx;
+}
+.goods_info_wrap{
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  margin-left: 15rpx;
+} 
+.goods_name{
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 30rpx;
+  font-size: 35rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_info{
+  display: flex;
+  flex-direction: column;
+  margin-top: 35rpx;
+}
+.goods_campus{
+  margin-top: 100rpx;
+}
+.goods_price{
+  color: #009589;
+  font-size: 32rpx;
+}

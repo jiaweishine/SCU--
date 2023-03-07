@@ -1,0 +1,67 @@
+/* pages/user/user.wxss */
+/* 头像、昵称、关注 */
+.user_info_wrap{
+  height: 38vh;
+  overflow: hidden;
+  background-color: #009589;
+}
+.user_wrap{
+  position: relative;
+}
+.user_bg{
+  height: 40vh;
+  width: 100%;
+  /* 高斯模糊 */
+  filter: blur(10rpx);
+}
+.user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_name{
+  color: #fff;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.user_follow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.follow_icon{
+  width:50rpx;
+  height:50rpx;
+}
+/* 已发布商品 */
+.goods-box{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.goods {
+  background: #fff;
+}
+.goods-img{
+  width: 345rpx;
+  height: 400rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+.goods_title {
+  font-size: 38rpx;
+}
+.goods_price {
+  color: red;
+}

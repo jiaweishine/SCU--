@@ -1,0 +1,46 @@
+<!--pages/modify.wxml-->
+<view class="modify_main">
+      <!--物品名称-->
+      <view>物品名称：</view>
+  <input class="input" name="name"value="{{name}}" bindinput="getgood_name"/>
+
+  <!--物品价格-->
+  <view>
+  预估价格：</view>
+  <input class="input" name="price"value="{{price}}" bindinput="getgood_price"/>
+
+  <!--选择校区-->
+  <view>
+  请选择校区：</view>
+  <picker class="input" name="area" value="{{area}}" bindchange="bindSchoolChange" range="{{areas}}">{{area}}</picker>
+
+  <!--选择分类-->
+  <view>请选择物品类别：</view>
+  <picker class="input" name="type" value="{{type}}" bindchange="bindTypeChange" range="{{types}}">{{type}}</picker>
+
+  <!--详情信息-->
+  <view class="title">请输入商品详情描述：</view>
+  <textarea class="good_detail" name="describe" value="{{describe}}"bindinput="getgood_detail"/>
+  <view class='top'><text class='top_name'>封面图片：</text></view>
+  <button class="sub_button" bindtap="ChooseImage">+</button>
+
+  <!-- 图片区域 -->
+    <image src="{{cover}}"></image>
+
+   <view class='top'><text class='top_name'>商品详情图片：</text></view>
+  <view class="weui-uploader">
+    <view class='pics' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image class='weui-uploader__img' src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                  <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+    </view>
+
+    <view class="tp_cont {{tj_ycang?'':'hide'}}" bindtap="chooseImg">
+      <view class="tp_add">+</view>
+    </view>
+
+</view>
+ <!--提交按钮--> 
+ <button class="submit" bindtap="submit">修改发布</button> 
+  </view>
+

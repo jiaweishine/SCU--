@@ -1,0 +1,16 @@
+<!--pages/confirm/confirm.wxml-->
+<!--输入区域-->
+<view class="item">请选择入学年份：
+  <picker class="picker" name="enrollment_year" value="{{enrollment_year}}" bindchange="bindPickerChange" range="{{enrollment_years}}">{{enrollment_year}}</picker>
+</view>
+   <view class="item"> 请选择年制：
+    <picker class="picker" name="year" value="{{years}}" bindchange="bindTypeChange" range="{{years}}">{{year}} </picker>
+</view>
+  
+<button bindtap="chooseSource" class="button">上传学生证：</button>
+<image src="{{sIdCard}}">
+</image>
+<!-- 按钮区域-->
+ <view class="btn_row">
+  <button class="btn" bindtap="submit">确认</button>
+</view> 

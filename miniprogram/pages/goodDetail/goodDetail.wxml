@@ -1,0 +1,78 @@
+<!--pages/goodDetail/goodDetail.wxml-->
+<!--轮播图-->
+<view class="detail_swiper">
+  <swiper
+  autoplay
+  circular
+  indicator-dots
+  indicator-active-color="#009589"
+  style='height:{{height}}'>
+    <swiper-item
+    wx:for="{{good.imgs}}"
+    wx:key="*this"
+    data-url="good.imgs">
+      <image mode="aspectFit" src="{{item}}" class="swiper_image"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!--价格、名称、收藏-->
+<view class="goods_price">¥{{good.price}}</view>
+<view class="goods_title_row">
+  <view class="goods_title">{{good.title}}</view>
+  <view class="goods_collect">
+    <image wx:if="{{isCollected==false}}" src="../../imgs/collect0.png" class="collect_icon" bindtap="cloacion"></image>
+    <image wx:if="{{isCollected==true}}" src="../../imgs/collect1.png" class="collect_icon" bindtap="cancelcoll"></image>
+    <view>收藏</view>
+  </view>
+</view>
+<!--详细信息-->
+<view class="goods_info">
+  <view class="goods_info_title">详细信息</view>
+  <view class="goods_info_content">
+    <view>校区：{{good.area}}</view> 
+    <view>分类：{{good.type}}</view>
+    <view bindtap="toSeller" data-uid="{{good._openid}}" class="goods">卖家：{{user.name}}</view>
+    <!-- <navigator url="/pages/user/user"  hover-class="none">卖家：{{good._openid}}</navigator> -->
+    <view>描述：{{good.describe}}</view>
+  </view>
+</view>
+<!--评论-->
+<view class="pub-comment">
+  <view class="pub-left">
+  <input class="pub-input" placeholder="{{placeHolder}}" bindinput="getContent" value="{{inputvalue}}"></input>
+  </view>
+  <view class="pub-button" bindtap="publishComment">发送</view>
+</view>
+<view class="goods_info_title">评论</view>
+  <view class="comment-box">
+    <block wx:for="{{good.commentList}}" wx:key="index">
+      <view class="comment" bindlongtap="{{openid==item.openid?'deleteComment':''}}" data-index="{{index}}" bindtap="replyComment">
+        <view class="nick-time">
+          <view class="nickname">{{item.nickname}}</view>
+          <view class="nickname">{{item.time}}</view>
+        </view>
+        <view class="content">
+        <text wx:if="{{item.toOpenid}}">回复<text class="nickname">{{item.tonickname}}：</text>
+        </text>{{item.text}}
+        </view>
+      </view>
+    </block>
+</view>
+<!--底部工具栏-->
+<view class="btm_tool"> 
+  <view bindtap="tocontact" class="tool_item">
+    <image class="icon" src="../../imgs/msg1.png"></image>
+    <view>联系商家</view>
+  </view>
+  <view class="tool_item">
+    <image class="icon" src="../../imgs/kefu.png"></image>
+    <view>举报用户</view>
+    <button open-type="contact" class="btn"></button>
+  </view>
+  <view class="tool_item">
+    <image class="icon" src="../../imgs/share.png"></image>
+    <view>分享</view>
+    <button open-type="share" class="btn"></button>
+  </view>
+  <view class="button" bindtap="buy">我想要</view>
+</view>

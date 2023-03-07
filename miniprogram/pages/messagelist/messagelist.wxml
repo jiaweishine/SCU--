@@ -1,0 +1,19 @@
+<!--pages/messagelist/messagelist.wxml-->
+
+<!-- <view class="follow_content">
+  <block wx:for="{{message}}" wx:key="*this">
+    <navigator url="/pages/message/messgae" hover-class="none" class="user_item"> -->
+      <!-- 左侧图片容器 -->
+      <!-- <image src="../../imgs/log.jpg" class="user_img"></image> -->
+      <!--右侧用户容器-->
+      <!-- <view class="user_info">
+        <view class="user_name">周佳穆</view>
+        <view class="user_time">2022/11/23</view>
+        <view class="user_message">你好欢迎使用小程序</view>
+      </view>
+    </navigator>
+  </block>
+</view> -->
+<view>
+  <TUIKit config="{{config}}" id="TUIKit"></TUIKit>
+</view>

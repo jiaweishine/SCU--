@@ -1,0 +1,32 @@
+/* pages/no_log/no_log.wxss */
+
+.login-container {
+  height: 900rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 图标的样式 */
+.img {
+  width: 200rpx;
+  margin-bottom: 16rpx;
+}
+
+/* 登录按钮的样式 */
+.btn-login {
+  width: 90%;
+  border-radius: 100px;
+  margin: 15px 0;
+  background-color: #c00000;
+  color: #f8f8f8;
+}
+
+/* 按钮下方提示消息的样式 */
+.tips-text {
+  font-size: 12px;
+  color: gray;
+}

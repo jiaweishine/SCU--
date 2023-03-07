@@ -1,0 +1,67 @@
+<!--pages/mine/mine.wxml-->
+<!-- 用户名和头像 -->
+<view class="top">
+  <view wx:if="{{userinfo}}" class="user_info">
+      <image class="top_img" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user">
+        <view class="top_name">{{user.name}}</view>
+        <view class="btn_logout" size="mini" hover-class="none" bindtap="loginOut">退出</view>
+      </view>
+  </view>
+  <view wx:else class="user_btn">
+    <navigator url="../no_log/no_log">登录</navigator>
+  </view>
+</view>
+<!-- 收藏,历史浏览,关注,帖子 -->
+<view wx:if="{{userinfo}}" class="classifier">
+  <view class="item" bindtap="navigateToHis" hover-class="none">
+    <view class="item_name">历史浏览</view>
+    <view class="right_arrow"></view>
+  </view>
+  <navigator class="item" url="/pages/collect/collect" hover-class="none">
+    <view class="item_name">我的收藏</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <navigator class="item" url="/pages/follow/follow" hover-class="none">
+    <view class="item_name">我的关注</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <navigator class="item" url="/pages/confirm/confirm" hover-class="none">
+    <view class="item_name">身份验证</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <navigator class="item" url="/pages/edit/edit" hover-class="none">
+    <view class="item_name">编辑资料</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <view class="item" bindtap="logoff">
+    <view class="item_name">注销账号</view>
+    <view class="right_arrow"></view>
+  </view>
+</view>
+<!-- 我的交易 -->
+<view wx:if="{{userinfo.avatarUrl}}" class="classifier">
+  <navigator url="/pages/mypub/mypub" hover-class="none" class="item">
+    <view class="item_name">我发布的</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <navigator url="/pages/mysell/mysell" hover-class="none" class="item">
+    <view class="item_name">我卖出的</view>
+    <view class="right_arrow"></view>
+  </navigator>
+  <navigator class="item" url="/pages/mybuy/mybuy" hover-class="none" class="item"> 
+    <view class="item_name">我买到的</view>
+    <view class="right_arrow"></view>
+  </navigator>
+</view>
+<!-- 其他 -->
+<view class="classifier">
+  <view class="item">
+    <button hover-class="none" open-type="contact" class="button_name">举报用户</button>
+    <view class="right_arrow"></view>
+  </view> 
+  <view class="item">
+    <button hover-class="none" open-type="feedback" class="button_name">反馈建议</button>
+    <view class="right_arrow"></view>
+  </view>
+</view>

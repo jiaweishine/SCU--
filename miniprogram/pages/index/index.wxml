@@ -1,0 +1,55 @@
+<!--index.wxml-->
+
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!-- 搜索框 -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" bindinput="getContent" class="weui-search-bar__input" placeholder="请输入搜索内容" />
+    </view>
+  </view>
+  <!-- 搜索按钮,调用搜索查询方法 -->
+  <view class="weui-search-bar__cancel-btn" bindtap='tosearch'>搜索</view>
+</view>
+<!-- 轮播图 -->
+<swiper autoplay="true" indicator-active-color="#009589" indicator-dots="true"
+circular="true" interval="3000">
+<swiper-item>
+<image src="../../imgs/SCU_JA.jpg"></image>
+</swiper-item>
+<swiper-item>
+<image src="../../imgs/SCU_WJ.jpg"></image>
+</swiper-item>
+<swiper-item>
+<image src="../../imgs/SCU_HX.jpg"></image>
+</swiper-item>
+</swiper>
+<!-- 商品类别 -->
+<view class="type">
+  <view class="type_classifier">
+    <view class="type-item" bindtap="toBook"><image src="../../imgs/book.png"></image>书籍</view>
+    <view class="type-item" bindtap="toCloth"><image src="../../imgs/clothes.png"></image>服装</view>
+    <view class="type-item" bindtap="tomakeup"><image src="../../imgs/meirong.png"></image>美妆</view>
+  </view>
+  <view class="type_classifier">
+    <view class="type-item" bindtap="todigit"><image src="../../imgs/digital.png"></image>数码</view>
+    <view class="type-item" bindtap="tobycicle"><image src="../../imgs/bicycle.png"></image>汽摩</view>
+    <view class="type-item" bindtap="tobag"><image src="../../imgs/bag.png"></image>背包</view>
+  </view>
+  <view class="type_classifier">
+    <view class="type-item" bindtap="todecoration"><image src="../../imgs/jellery.png"></image>饰品</view>
+    <view class="type-item" bindtap="tofood"><image src="../../imgs/food.png"></image>食品</view>
+    <view class="type-item" bindtap="toothers"><image src="../../imgs/others.png"></image>其他</view>
+  </view>
+</view>
+<!-- 商品列表 -->
+<view class="goods-box">
+  <block wx:for="{{goodlist}}" wx:key="*this">
+    <view bindtap="toGoodDetail" data-id="{{item._id}}" class="goods">
+      <image src="{{item.cover}}" class="goods-img"></image>
+      <view class="goods_title">{{item.title}}</view>
+      <view>{{item.area}}</view>
+      <view class="goods_price">¥{{item.price}}</view>
+    </view>
+  </block>
+</view>

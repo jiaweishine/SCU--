@@ -1,0 +1,5 @@
+<!--pages/cloud/cloud.wxml-->
+<text>{{openid}}</text>
+<button>
+<navigator url="../../pages/index/index"></navigator>
+跳转首页</button>

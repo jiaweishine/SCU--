@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "UpImg":"../../components/UpImg/UpImg"
+      },
+      "navigationBarTitleText": "修改商品信息",
+      "navigationBarBackgroundColor": "#009589",
+      "navigationBarTextStyle": "white"
+}

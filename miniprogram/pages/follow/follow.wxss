@@ -1,0 +1,22 @@
+/* pages/follow/follow.wxss */
+.user_item{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.user_img{
+  display: flex;
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.user_name{
+  display: flex;
+  flex-direction: column;
+  color: #009589;
+  font-size: 32rpx;
+  justify-content: center;
+  margin-left: 20rpx;
+} 

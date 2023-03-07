@@ -1,0 +1,8 @@
+<!--pages/message/message.wxml-->
+<!--聊天记录-->
+<view class="message_main">
+  <view class="container">卖家id为:</view>
+  <text class="id" selectable='true'>{{good._openid}}</text>
+  <view class="container">请前往消息界面使用该id搜索用户发起对话</view>
+</view>
+<view class="button_container"><button bindtap="toMessage" class="button">前往消息界面</button></view>

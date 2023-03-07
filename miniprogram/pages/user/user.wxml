@@ -1,0 +1,26 @@
+<!--pages/user/user.wxml-->
+<!--头像、昵称、关注-->
+<view class="user_info_wrap">
+  <view class="user_wrap">
+    <image class="user_bg" src="{{user.photo}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{user.photo}}"></image>
+      <view class="user_name">
+        {{user.name}}
+        <image wx:if="{{isfollowed==false}}" src="../../imgs/follow0.png" class="follow_icon" bindtap="floacion"></image>
+        <image wx:if="{{isfollowed==true}}" src="../../imgs/follow1.png" class="follow_icon" bindtap="cancelflo"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--发布的商品-->
+<view class="goods-box">
+  <block wx:for="{{goodlist}}" wx:key="*this">
+    <view bindtap="toGoodDetail" data-id="{{item._id}}" class="goods">
+      <image src="{{item.cover}}" class="goods-img"></image>
+      <view class="goods_title">{{item.title}}</view>
+      <view>{{item.area}}</view>
+      <view class="goods_price">¥{{item.price}}</view>
+    </view>
+  </block>
+</view>

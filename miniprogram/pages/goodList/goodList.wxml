@@ -1,0 +1,32 @@
+<!--pages/goodList/goodList.wxml-->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!-- 搜索框 -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input bindinput="getContent" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" />
+    </view>
+  </view>
+  <!-- 搜索按钮,调用搜索查询方法 -->
+  <view class="weui-search-bar__cancel-btn" bindtap='tosearch'>搜索</view>
+</view>
+<!-- 列表 -->
+<!-- 商品列表 -->
+<view>
+  <block wx:for="{{good}}" wx:key="*this">
+  <view bindtap="toGoodDetail" data-id="{{item._id}}" class="goods_item">
+    <!--左侧图片容器-->
+    <view class="goods_img_wrap">
+      <image mode="widthFix" src="{{item.cover}}"></image>
+    </view>
+    <!-- 右侧商品容器 -->
+    <view class="goods_info_wrap">
+      <view class="goods_name">{{item.title}}</view>
+      <view class="goods_info">
+        <view class="goods_campus">{{item.area}}</view>
+        <view class="goods_price">¥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+  </block>
+</view> 

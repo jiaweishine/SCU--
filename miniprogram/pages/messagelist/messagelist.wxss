@@ -1,0 +1,36 @@
+/* pages/messagelist/messagelist.wxss */
+.user_item{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.user_img{
+    display: flex;
+    border-radius: 25%;
+    width: 150rpx;
+    height: 150rpx;
+    margin-left: 30rpx;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+}
+.user_info{
+    margin-left: 20rpx;
+}
+.user_name{
+    display: flex;
+    flex-direction: column;
+    color: #009589;
+    font-size: 34rpx;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+.user_time{
+    color:gray;
+    font-size: 20rpx;
+    margin-left: 400rpx;
+}
+.user_message{
+    color:gray;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+}
+ 

@@ -1,0 +1,25 @@
+.message_main{
+  margin-top: 100rpx;
+}
+.container{
+  padding: 30rpx;
+}
+.id{
+  color: #009589;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  background-color: #009589;
+  color: white;
+  width: 50%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 0;
+}

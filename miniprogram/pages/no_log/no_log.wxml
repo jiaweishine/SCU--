@@ -1,0 +1,7 @@
+<!--pages/no_log/no_log.wxml-->
+<view class="login-container">
+  <image src="/imgs/me1.png" class="img" mode="widthFix"></image>
+  <button class="btn-login" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo"
+  bindtap="login">一键登录</button>
+  <text class="tip-text">登录后尽享更多权益</text>
+</view>

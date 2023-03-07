@@ -1,0 +1,37 @@
+/* pages/mysell/mysell.wxss */
+.order_item{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.order_item image{
+  border-radius: 25rpx;
+  height: 200rpx;
+  width: 250rpx;
+  justify-content: center;
+  align-items: center;
+}
+.order_info{
+  color: #666;
+  margin-left: 20rpx;
+}
+.order_row{
+  display: flex;
+  padding: 5rpx 0;
+}
+.order_text{
+  margin-right: 10rpx;
+  width: 136rpx;
+}
+.order_name_value{
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.order_price_value{
+  color: #009589;
+  font-size: 32rpx;
+}
+.deliver{
+  color: red;
+  margin-left: 20rpx;
+}

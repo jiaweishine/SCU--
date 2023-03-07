@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "TUIKit": "../../TUIKit/index"
+  },
+  "navigationBarTitleText": "消息列表",
+  "navigationStyle": "custom"
+}
